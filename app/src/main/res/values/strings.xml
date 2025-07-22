@@ -6,4 +6,5 @@
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="login_button">Login</string>
+    <string name="register_as_new_user">Register As New User</string>
 </resources>

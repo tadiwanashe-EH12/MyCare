@@ -1,5 +1,6 @@
 package com.tadiwanashemaruza.mycareapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +18,7 @@ public class LogInActivity extends AppCompatActivity {
 
     EditText edUsername, edPassword;
     Button btn;
+TextView tv;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
@@ -29,14 +31,24 @@ public class LogInActivity extends AppCompatActivity {
         edUsername= findViewById(R.id.editTextLoginUsername);
         edPassword= findViewById(R.id.editTextLoginPassword);
         btn= findViewById(R.id.buttonLogin);
-        btn= findViewById(R.id.buttonRegister);
+        tv= findViewById(R.id.textViewRegister);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String username = edUsername.getText().toString();
                 String password = edPassword.getText().toString();
-                Toast.makeText(getApplicationContext(),"Login Success",Toast.LENGTH_SHORT).show();
+                if(username.isEmpty() || password.isEmpty()){
+                    Toast.makeText(getApplicationContext(),"Please fill in all details",Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getApplicationContext(),"Login Success",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+startActivity(new Intent(LogInActivity.this.RegisterActivity.class));
             }
         });
     }
