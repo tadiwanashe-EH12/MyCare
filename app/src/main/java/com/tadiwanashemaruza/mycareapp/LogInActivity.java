@@ -1,6 +1,11 @@
 package com.tadiwanashemaruza.mycareapp;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,7 +15,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class LogInActivity extends AppCompatActivity {
 
-    @Override
+    EditText edUsername, edPassword;
+    Button btn;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
@@ -19,6 +25,19 @@ public class LogInActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+        edUsername= findViewById(R.id.editTextLoginUsername);
+        edPassword= findViewById(R.id.editTextLoginPassword);
+        btn= findViewById(R.id.buttonLogin);
+        btn= findViewById(R.id.buttonRegister);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String username = edUsername.getText().toString();
+                String password = edPassword.getText().toString();
+                Toast.makeText(getApplicationContext(),"Login Success",Toast.LENGTH_SHORT).show();
+            }
         });
     }
 }
