@@ -30,7 +30,7 @@ TextView tv;
         });
         edUsername= findViewById(R.id.editTextLoginUsername);
         edPassword= findViewById(R.id.editTextLoginPassword);
-        btn= findViewById(R.id.buttonLogin);
+        btn= findViewById(R.id.ButtonLogin);
         tv= findViewById(R.id.textViewRegister);
 
         btn.setOnClickListener(new View.OnClickListener() {
