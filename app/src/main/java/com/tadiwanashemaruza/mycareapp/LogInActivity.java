@@ -19,6 +19,8 @@ public class LogInActivity extends AppCompatActivity {
     EditText edUsername, edPassword;
     Button btn;
 TextView tv;
+    private Intent RegisterActivity;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);

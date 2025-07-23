@@ -42,8 +42,8 @@
 
     <EditText
         android:id="@+id/editTextLoginUsername"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="267dp"
+        android:layout_height="42dp"
         android:background="@drawable/input_bg"
         android:drawableStart="@drawable/ic_baseline_person_24"
         android:drawablePadding="10dp"
@@ -64,8 +64,8 @@
 
     <EditText
         android:id="@+id/editTextLoginPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="267dp"
+        android:layout_height="42dp"
         android:background="@drawable/input_bg"
         android:drawableStart="@drawable/ic_baseline_security_24"
         android:drawablePadding="10dp"
@@ -84,8 +84,8 @@
 
     <Button
         android:id="@+id/ButtonLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="135dp"
+        android:layout_height="53dp"
         android:background="@drawable/input_bg"
         android:text="@string/button_login"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -101,6 +101,7 @@
         android:layout_height="wrap_content"
         android:text="@string/register_as_a_new_user"
         android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
